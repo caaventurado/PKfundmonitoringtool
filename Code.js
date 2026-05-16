@@ -10,7 +10,7 @@ function onOpen() {
 function onEdit(e) {
   var range = e.range;
   var sheet = range.getSheet();
-  var sheetName = "2026 FUND MONITORING";
+  var sheetName = "2026 FUND MONITORING"; //For Updating
   
   // Only run on the specified sheet
   if (sheet.getName() !== sheetName) return; 
@@ -27,7 +27,7 @@ if (col === 1) {
     var cellB = sheet.getRange(row, 2);
     
     if (val === "SAA") {
-      var options = ["DO 2026-0062","DO 2026-0144", "DO 2026-0194","DO 2026-0209","DO 2026-0221","Others"]; 
+      var options = ["DO 2026-0062","DO 2026-0144", "DO 2026-0194","DO 2026-0209","DO 2026-0221","Others"]; //For Updating
       var rule = SpreadsheetApp.newDataValidation()
         .requireValueInList(options)
         .setAllowInvalid(false)
